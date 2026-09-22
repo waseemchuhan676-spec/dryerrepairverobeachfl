@@ -1,0 +1,39 @@
+# Clean URLs for Apache / LiteSpeed hosts (SiteGround, cPanel, Hostinger,
+# GoDaddy, Namecheap…). Netlify, Vercel and Cloudflare Pages ignore this file
+# and use netlify.toml / vercel.json instead. Safe to leave in place anywhere.
+
+Options -MultiViews
+ErrorDocument 404 /404.html
+
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /
+
+  # /services/roof-repair -> services/roof-repair.html (internal, no redirect)
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteCond %{REQUEST_FILENAME}\.html -f
+  RewriteRule ^(.+?)/?$ $1.html [L]
+
+  # Canonical: a direct .html hit 301s to the clean URL.
+  RewriteCond %{THE_REQUEST} \s/+index\.html[\s?] [NC]
+  RewriteRule ^ / [R=301,L]
+  RewriteCond %{THE_REQUEST} \s/+(.+?)/index\.html[\s?] [NC]
+  RewriteRule ^ /%1/ [R=301,L]
+  RewriteCond %{THE_REQUEST} \s/+(.+?)\.html[\s?] [NC]
+  RewriteRule ^ /%1 [R=301,L]
+</IfModule>
+
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/css application/javascript application/json image/svg+xml application/xml
+</IfModule>
+
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresByType text/css "access plus 1 month"
+  ExpiresByType application/javascript "access plus 1 month"
+  ExpiresByType image/svg+xml "access plus 6 months"
+  ExpiresByType image/png "access plus 6 months"
+  ExpiresByType image/jpeg "access plus 6 months"
+  ExpiresByType image/webp "access plus 6 months"
+</IfModule>

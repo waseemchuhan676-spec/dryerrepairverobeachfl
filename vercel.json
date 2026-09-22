@@ -1,0 +1,81 @@
+{
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "redirects": [
+    {
+      "source": "/index.html",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/about.html",
+      "destination": "/about",
+      "permanent": true
+    },
+    {
+      "source": "/appliance-florida-bridge.html",
+      "destination": "/appliance-florida-bridge",
+      "permanent": true
+    },
+    {
+      "source": "/appliance-gifford.html",
+      "destination": "/appliance-gifford",
+      "permanent": true
+    },
+    {
+      "source": "/appliance-vero-beach-south.html",
+      "destination": "/appliance-vero-beach-south",
+      "permanent": true
+    },
+    {
+      "source": "/blog.html",
+      "destination": "/blog",
+      "permanent": true
+    },
+    {
+      "source": "/contact.html",
+      "destination": "/contact",
+      "permanent": true
+    },
+    {
+      "source": "/dryer-deep-cleaning.html",
+      "destination": "/dryer-deep-cleaning",
+      "permanent": true
+    },
+    {
+      "source": "/dryer-not-heating.html",
+      "destination": "/dryer-not-heating",
+      "permanent": true
+    },
+    {
+      "source": "/dryer-repair.html",
+      "destination": "/dryer-repair",
+      "permanent": true
+    },
+    {
+      "source": "/electric-dryer-repair.html",
+      "destination": "/electric-dryer-repair",
+      "permanent": true
+    },
+    {
+      "source": "/locations.html",
+      "destination": "/locations",
+      "permanent": true
+    },
+    {
+      "source": "/privacy-policy.html",
+      "destination": "/privacy-policy",
+      "permanent": true
+    },
+    {
+      "source": "/repair-dryer-kenmore.html",
+      "destination": "/repair-dryer-kenmore",
+      "permanent": true
+    },
+    {
+      "source": "/services.html",
+      "destination": "/services",
+      "permanent": true
+    }
+  ]
+}
