@@ -98,7 +98,16 @@
       </button>
       <nav class="nav-links" id="primary-navigation" aria-label="Primary navigation">
         <a href="/">Home</a>
-        <a href="services">Services</a>
+        <div class="nav-item-dropdown">
+          <a href="services" class="dropdown-trigger" aria-current="page">Services <svg class="dropdown-arrow" width="10" height="6" viewBox="0 0 10 6" fill="currentColor"><path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg></a>
+          <div class="nav-submenu" aria-label="Services submenu">
+            <a href="dryer-repair">Dryer Repair</a>
+            <a href="dryer-not-heating">Dryer Not Heating</a>
+            <a href="electric-dryer-repair">Electric Dryer Repair</a>
+            <a href="dryer-deep-cleaning">Dryer Deep Cleaning</a>
+            <a href="repair-dryer-kenmore">Repair Dryer Kenmore</a>
+          </div>
+        </div>
         <a href="about">About</a>
         <a href="locations">Service areas</a>
         <a href="blog">Blog</a>
@@ -149,6 +158,14 @@
         <div><p class="eyebrow">Complete service support</p><h2>Our Dryer Repair Services</h2></div>
         <p>We offer a comprehensive range of dryer repair services in Vero Beach, including solutions for common issues like the dryer not heating. Our team is equipped to handle all your appliance needs.</p>
       </div>
+      <nav class="service-subitems-bar" aria-label="Service categories">
+        <span class="subitems-label">Sub Services:</span>
+        <a href="dryer-repair" class="subitem-pill">Dryer Repair</a>
+        <a href="dryer-not-heating" class="subitem-pill">Dryer Not Heating</a>
+        <a href="electric-dryer-repair" class="subitem-pill">Electric Dryer Repair</a>
+        <a href="dryer-deep-cleaning" class="subitem-pill">Dryer Deep Cleaning</a>
+        <a href="repair-dryer-kenmore" class="subitem-pill">Repair Dryer Kenmore</a>
+      </nav>
       <div class="service-list">
         
         <a class="service-row" href="dryer-repair" data-sal="slide-up" data-sal-duration="520">
